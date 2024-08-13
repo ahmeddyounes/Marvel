@@ -54,6 +54,7 @@ The project follows a clean architecture approach, with the following layers:
 Domain Layer: Contains the business logic of the application.
 
 Data Layer: Responsible for data handling, including API calls and database management.
+
 Presentation Layer: Manages the UI components and communicates with the ViewModel to display data.
 
 
