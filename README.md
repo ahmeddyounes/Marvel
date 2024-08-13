@@ -31,7 +31,7 @@ All data is fetched from the [Marvel API](https://developer.marvel.com/). The ap
 ### How to Run the Project
 
 -Clone the repository from GitHub:
-   git clone https://github.com/your-username/marvel-app.git
+   git clone https://github.com/ahmeddyounes/Marvel.git
 
 -Open the project in Android Studio.
 
