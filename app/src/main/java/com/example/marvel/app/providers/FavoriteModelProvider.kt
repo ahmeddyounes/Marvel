@@ -5,6 +5,7 @@ import androidx.lifecycle.MediatorLiveData
 import com.example.marvel.app.database.dao.FavoriteDao
 import com.example.marvel.app.database.models.Character
 import com.example.marvel.app.database.models.Favorite
+import com.example.marvel.app.exceptions.InvalidOperationException
 import com.example.marvel.app.viewmodels.collection.CollectionItem
 import com.example.marvel.app.viewmodels.collection.ICollectionProvider
 
@@ -65,6 +66,6 @@ class FavoriteModelProvider(
         limit: Int,
         offset: Int
     ): LiveData<List<CollectionItem>> {
-        TODO("Not yet implemented")
+        throw InvalidOperationException("Favorite model cannot have associations.")
     }
 }
