@@ -41,21 +41,21 @@ All data is fetched from the [Marvel API](https://developer.marvel.com/). The ap
 
 
 ### Key Features
-Search for Marvel Characters: The app allows users to search for their favorite Marvel characters by name.
+**Search for Marvel Characters:** The app allows users to search for their favorite Marvel characters by name.
 
-View Character Details: Detailed information about each character is displayed, including their description, comics, series, and more.
+**View Character Details:** Detailed information about each character is displayed, including their description, comics, series, and more.
 
-Offline Support: If the user is disconnected from the internet, the app can display cached results from previous searches.
+**Offline Support:** If the user is disconnected from the internet, the app can display cached results from previous searches.
 
 
 ### Code Structure
 The project follows a clean architecture approach, with the following layers:
 
-Domain Layer: Contains the business logic of the application.
+**Domain Layer:** Contains the business logic of the application.
 
-Data Layer: Responsible for data handling, including API calls and database management.
+**Data Layer:** Responsible for data handling, including API calls and database management.
 
-Presentation Layer: Manages the UI components and communicates with the ViewModel to display data.
+**Presentation Layer:** Manages the UI components and communicates with the ViewModel to display data.
 
 
 ### Contributing
