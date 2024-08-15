@@ -4,13 +4,11 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import com.example.marvel.app.database.models.Event
 import com.example.marvel.app.database.models.EventAssociation
-import com.example.marvel.app.providers.local.LocalEventModelProvider
-import com.example.marvel.app.providers.network.NetworkEventModelProvider
 import com.example.marvel.app.viewmodels.collection.CollectionItem
 
 class EventModelProvider(
-    private val local: LocalEventModelProvider,
-    private val network: NetworkEventModelProvider
+    private val local: AbstractEventModelProvider,
+    private val network: AbstractEventModelProvider
 ) : AbstractEventModelProvider() {
     override fun getById(id: Int): LiveData<Event?> {
         return MediatorLiveData<Event?>().apply {

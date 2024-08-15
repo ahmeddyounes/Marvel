@@ -3,12 +3,10 @@ package com.example.marvel.app.providers
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import com.example.marvel.app.database.models.Character
-import com.example.marvel.app.providers.local.LocalCharacterModelProvider
-import com.example.marvel.app.providers.network.NetworkCharacterModelProvider
 
 class CharacterModelProvider(
-    private val local: LocalCharacterModelProvider,
-    private val network: NetworkCharacterModelProvider
+    private val local: AbstractCharacterModelProvider,
+    private val network: AbstractCharacterModelProvider
 ) : AbstractCharacterModelProvider() {
     override fun getById(id: Int): LiveData<Character?> {
         return MediatorLiveData<Character?>().apply {

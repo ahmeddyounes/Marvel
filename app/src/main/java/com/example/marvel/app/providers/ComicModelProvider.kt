@@ -5,12 +5,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import com.example.marvel.app.database.models.Comic
 import com.example.marvel.app.database.models.ComicAssociation
-import com.example.marvel.app.providers.local.LocalComicModelProvider
-import com.example.marvel.app.providers.network.NetworkComicModelProvider
 
 class ComicModelProvider(
-    private val local: LocalComicModelProvider,
-    private val network: NetworkComicModelProvider
+    private val local: AbstractComicModelProvider,
+    private val network: AbstractComicModelProvider
 ) : AbstractComicModelProvider() {
     override fun getById(id: Int): LiveData<Comic?> {
         return MediatorLiveData<Comic?>().apply {

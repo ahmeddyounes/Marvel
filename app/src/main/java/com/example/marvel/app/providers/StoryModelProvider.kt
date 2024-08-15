@@ -4,12 +4,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import com.example.marvel.app.database.models.Story
 import com.example.marvel.app.database.models.StoryAssociation
-import com.example.marvel.app.providers.local.LocalStoryModelProvider
-import com.example.marvel.app.providers.network.NetworkStoryModelProvider
 
 class StoryModelProvider(
-    private val local: LocalStoryModelProvider,
-    private val network: NetworkStoryModelProvider
+    private val local: AbstractStoryModelProvider,
+    private val network: AbstractStoryModelProvider
 ) : AbstractStoryModelProvider() {
     override fun getById(id: Int): LiveData<Story?> {
         return MediatorLiveData<Story?>().apply {
