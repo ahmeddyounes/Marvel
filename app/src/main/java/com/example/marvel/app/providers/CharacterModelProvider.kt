@@ -43,7 +43,6 @@ class CharacterModelProvider(
     }
 
     override fun search(text: String, limit: Int, offset: Int): LiveData<List<Character>> {
-        return local.search(text, limit, offset)
         return MediatorLiveData<List<Character>>().apply {
             addSource(network.search(text, limit, offset)) { result ->
                 if (result.isNotEmpty()) {
